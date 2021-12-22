@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: 0.5s ease;
+}
+body.dark{
+    background-color: #111;
+    transition: 0.5s ease;
+}
+label{
+    position: relative;
+    width: 50px;
+    height: 24px;
+    background-color: #111;
+    padding: 5px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+}
+.fa-moon{
+    color: darkorange;
+}
+.fa-sun{
+    color: darkorange;
+}
+.ball{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(224, 216, 228);
+    position: absolute;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: 0.5s ease;
+
+}
+.checkbox{
+    position: absolute;
+    opacity: 0;
+}
+.checkbox:checked+ .label .ball{
+    transform: translateX(26px);
+}
+.checkbox:checked + .label{
+    background-color: ghostwhite;
+}
+.checkbox:checked + .label .ball{
+    background-color: rgb(49, 49, 236);
+}
+#infoo{
+    margin-top: 20px;
+    /* text-align: center; */
+    font-size: 24px;
+    margin-left: -50px;
+    font-weight: bold;
+    transition: 0.5s ease ;
+}
+h2{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: darkturquoise;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
